@@ -50,4 +50,3 @@
 9. As a user, I can click into a "location" page to view the company's location on a map.
 9. As an employee, I can log hours so I can get paid the correct amount.
 10. As an employee, I can view my schedule so I know when and where I'm working.
-11. test
