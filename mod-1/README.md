@@ -50,3 +50,10 @@
 9. As a user, I can click into a "location" page to view the company's location on a map.
 9. As an employee, I can log hours so I can get paid the correct amount.
 10. As an employee, I can view my schedule so I know when and where I'm working.
+
+
+### 1.1.5 MVP
+* User can view homepage and nav bar
+* User can click links in navbar to navigate to schedule, about, careers, FAQs, location
+* "Employees" link to log hours and view schedule (auth added later)
+* "Admin" page to view daily schedule of all employees, employee hours log page, invoice clients
