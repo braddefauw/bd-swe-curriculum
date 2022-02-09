@@ -22,7 +22,7 @@
 ### 1.1.3 Requirements
 #### Functional Requirements
 | ID | Priority | Description |
-| :----------- :| :-----------: |:-----------: |
+| :-----------:| :-----------: |:-----------: |
 | FR1 | MUST | Admin page must show hours worked per week per employee |
 | FR2 | MUST | Admin page must show schedule |
 | FR3 | MUST | Admin page must be able to invoice clients |
@@ -32,7 +32,7 @@
 
 #### Non-Functional Requirements
 | ID | Priority | Description |
-| :----------- :| :-----------: |:-----------: |
+| :-----------:| :-----------: |:-----------: |
 | NFR1 | MUST | The application code must be documented in a manner that it would be easy for a new developer to understand. |
 | NFR2 | MUST | The application code must be written in React. |
 | NFR3 | MUST | The application code must be stored in a Github reposistory. |
