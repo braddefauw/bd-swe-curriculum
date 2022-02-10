@@ -1,7 +1,7 @@
 ## Agile Development Plan
 
 ### 1.1.1 Agile Development
-* Opportunity: A social care company provides home-based health care for the elderly. The pool of carers work in shifts and visit properties in pairs. A care package includes 3 visits each day; morning, afternoon and evening, 7 days a week. At present, the central office draws up lists on a spreadsheet and, as carers visit a property, they sign in and out on a sheet of paper that is collected at the end of the week and used to invoice clients. Sometimes the signing sheet is lost or not handed in. Also carers can be delayed at some properties and this has caused some heated complaints from those expecting carers who then arrive late. Can you help this company be more efficient?
+* Opportunity: PlantShed is one of the most popular plantstores in NYC. Not only do they sell a wide variety of houseplants and flowers, they have a local coffeeshop where customers can enjoy a fresh brew before shopping. PlantShed is hoping to expand into the e-commerce space, where customers can view the inventory of plants, flowers, and coffeebeans and shop from home.
 
 ### 1.1.2 Personas
 #### Persona #1
