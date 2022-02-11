@@ -1,8 +1,7 @@
 .container {
 	display: flex;
- 	min-height: 100vh;
- 	flex-direction: column;
-
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .header {
@@ -10,8 +9,8 @@
 	flex-direction: row;
 	width: 100vw;
 	padding: 15px;
-	background-color: #e3e3e3;
-	color: cornflowerblue;
+	background-color: cornsilk;
+	color: gray;
 }
 
 .header-info {
@@ -21,62 +20,24 @@
 .header-nav {
 	width: 33%;
 	display: flex;
-	align-content: flex-end;
 }
 
 .nav-item {
 	width: 50%;
+	margin-top: 10vh;
 }
 
+.main-gallery {
+	width: calc(100vw - 40px)
+}
 
 .main-gallery-img {
-	width: calc(25% - 12px);
+	width: calc(25% - 20px);
 	margin: 3px;
 	border-radius: 5px;
-	height: 48vh;
-	padding-top: 2vh;
-}
-
-.crop {
 	height: 250px;
 }
 
 .main-gutter {
-	width: 4em;
-}
-
-
-@media (max-width: 1000px) {
-  .container {
-    flex: 1;
-  }
-  .main-gallery-img {
-  	width: calc(33% - 12px);
-  }
-  
-}
-
-@media (max-width: 800px) {
-
-  .main-gallery-img {
-  	width: calc(50% - 12px);
-  }
-  
-}
-
-@media (max-width: 450px) {
-
-	.main-gallery-img {
-		width: calc(100% - 12px);
-	}
-	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		opacity: 0.6;
-	}
-	.header-nav {
-		flex-direction: column;
-	}
-  
+	width: 20px;
 }
