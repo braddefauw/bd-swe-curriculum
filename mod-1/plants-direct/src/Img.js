@@ -1,9 +1,9 @@
-// export const Img = (props) => {
-//     const {
-//         imageId, size, title, imageSrc
-//     } = props.product.images
-
-//     return (
-//         {image.map(imageSrc =>(<img src={image.imageSrc} alt={} />))}
-//     )
-// }
+export const Img = props => {
+    const images = props.images
+   
+    return (
+        <div>
+            {images.map(image => (<img src={image.imageSrc} alt={image.title} />))}
+        </div>
+    )
+}
