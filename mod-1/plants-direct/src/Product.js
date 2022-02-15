@@ -19,7 +19,7 @@ export const Product = (props) => {
                 Full Details
                 </a>        
                 <button id="mybtn"onClick={()=>props.addToCart(props.product)}>
-                Add to cart
+                {props.message || "Add To Cart"}
                 </button>
             </div>            
         </article>
