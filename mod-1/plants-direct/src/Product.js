@@ -4,7 +4,7 @@ export const Product = (props) => {
     const {
         name, description, features, price, images, stockLevel
     } = props.product
-    
+
     return (
         <article className="product">
             <h3>{name}</h3>
@@ -18,7 +18,7 @@ export const Product = (props) => {
                 <a className="button--anchor">
                 Full Details
                 </a>        
-                <button>
+                <button id="mybtn"onClick={()=>props.addToCart(props.product)}>
                 Add to cart
                 </button>
             </div>            
