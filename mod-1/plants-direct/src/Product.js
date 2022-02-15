@@ -2,8 +2,16 @@ import {Img} from "./Img"
 
 export const Product = (props) => {
     const {
-        name, description, features, price, images, stockLevel
+        name, description, features, price, images, stockLevel, productId, addedToCart
     } = props.product
+
+    let message = '';
+
+    if(addedToCart){
+        message = "Remove From Cart"
+    }else{
+        message = "Add To Cart"
+    }
 
     return (
         <article className="product">
@@ -18,8 +26,8 @@ export const Product = (props) => {
                 <a className="button--anchor">
                 Full Details
                 </a>        
-                <button id="mybtn"onClick={()=>props.addToCart(props.product)}>
-                {props.message || "Add To Cart"}
+                <button id="mybtn" key={productId} onClick={()=>props.addToCart(props.product)}>
+                {message}
                 </button>
             </div>            
         </article>

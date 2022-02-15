@@ -11,12 +11,11 @@ function App() {
     if(cart.indexOf(product) == -1){
       setCart([...cart, product])
       product.addedToCart = true;
-      setMessage('Remove From Cart')
     }
     else{
-      cart.splice(cart.indexOf(product), 1);
+      const newCart = cart.filter((oldProduct) => oldProduct !== product);
       product.addedToCart = false;
-      setMessage('Add To Cart')
+      setCart(newCart);
     }
   }
 
