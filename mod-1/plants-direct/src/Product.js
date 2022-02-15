@@ -2,13 +2,13 @@ import {Img} from "./Img"
 
 export const Product = (props) => {
     const {
-        name, description, features, price, images
+        name, description, features, price, images, stockLevel
     } = props.product
     
     return (
         <article className="product">
             <h3>{name}</h3>
-            <Img images={images}/>
+            <Img image={images[0]} stockLevel={stockLevel}/>
             <p>{description}</p>
             <ul>
                 {features.map(feature =>(<li>{feature}</li>))}
