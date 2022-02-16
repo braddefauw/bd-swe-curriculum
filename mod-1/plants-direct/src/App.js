@@ -5,14 +5,12 @@ import { Product } from './Product';
 
 function App() {
   const [cart, setCart] = useState(data.cart);
-  const [message, setMessage] = useState('')
 
   const addToCart = product => {
-    if(cart.indexOf(product) == -1){
+    if(cart.indexOf(product) === -1){
       setCart([...cart, product])
       product.addedToCart = true;
-    }
-    else{
+    }else{
       const newCart = cart.filter((oldProduct) => oldProduct !== product);
       product.addedToCart = false;
       setCart(newCart);
@@ -23,7 +21,7 @@ function App() {
   
   return (
     <div className="App">
-      {data.products.map(product => <Product key={product.productId} product={product} addToCart={addToCart} message={message}/>)}
+      {data.products.map(product => <Product key={product.productId} product={product} addToCart={addToCart}/>)}
       <h4>You have {cart.length} items in your cart.</h4>
     </div>
   );
