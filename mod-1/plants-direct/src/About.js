@@ -1,29 +1,15 @@
-import { useState } from 'react'; 
-import './App.css';
-import data from './products.json';
-import { Product } from './Product';
+ import './App.css';
 
-function Home(){
-    const [cart, setCart] = useState(data.cart);
-
-    const addToCart = product => {
-        if(cart.indexOf(product) === -1){
-        setCart([...cart, product])
-        product.addedToCart = true;
-        }else{
-        const newCart = cart.filter((oldProduct) => oldProduct !== product);
-        product.addedToCart = false;
-        setCart(newCart);
-        }
-    }
-
-    console.log(cart)
-    
+function About(){
     return (
         <div className="App">
-            <h1>This is the about page!</h1>
+            <div class="about-section">
+                <h1>About Us Page</h1>
+                <p>Some text about who we are and what we do.</p>
+                <p>Resize the browser window to see that this page is responsive by the way.</p>
+            </div>
         </div>
     );
 }
 
-export default Home;
+export default About;

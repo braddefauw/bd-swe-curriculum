@@ -1,29 +1,51 @@
-import { useState } from 'react'; 
 import './App.css';
-import data from './products.json';
-import { Product } from './Product';
 
-function Home(){
-    const [cart, setCart] = useState(data.cart);
-
-    const addToCart = product => {
-        if(cart.indexOf(product) === -1){
-        setCart([...cart, product])
-        product.addedToCart = true;
-        }else{
-        const newCart = cart.filter((oldProduct) => oldProduct !== product);
-        product.addedToCart = false;
-        setCart(newCart);
-        }
-    }
-
-    console.log(cart)
-    
+function Contact(){
     return (
         <div className="App">
-            <h1>This is the contact page!</h1>
+            <h2>Our Team</h2>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img class="prof-pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Jane" />
+                        <div class="container">
+                            <h2>Jane Doe</h2>
+                            <p class="title">CEO & Founder</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>jane@example.com</p>
+                            <p><button class="button">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img class="prof-pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Mike" />
+                        <div class="container">
+                            <h2>Mike Ross</h2>
+                            <p class="title">Head Botanist</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>mike@example.com</p>
+                            <p><button class="button">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                        <img class="prof-pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="John" />
+                        <div class="container">
+                            <h2>John Doe</h2>
+                            <p class="title">Head Barista</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>john@example.com</p>
+                            <p><button class="button">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
 
-export default Home;
+export default Contact;
