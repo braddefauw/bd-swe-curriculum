@@ -23,7 +23,7 @@ export const Product = (props) => {
             </ul>
             <p>${price}</p>
             <div className="promo-blocks__actions">
-                <a className="button--anchor">
+                <a href={`/products/${productId}`} className="button--anchor">
                 Full Details
                 </a>        
                 <button id="mybtn" key={productId} onClick={()=>props.addToCart(props.product)}>

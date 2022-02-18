@@ -138,3 +138,9 @@ nav {
 .header-link:hover {
   color: black
 }
+
+header>h1 {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  margin-left: 0.5em;
+}

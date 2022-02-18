@@ -4,6 +4,7 @@ import About from './About'
 import { useState } from 'react'; 
 import data from './products.json';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'
+import ProductDetails from './ProductDetails'
 
 function App() {
   const [cart, setCart] = useState(data.cart);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element = {<Home addToCart={addToCart} data={data}/>} />
         <Route path="/about" element = {<About />} />
         <Route path="/contact" element = {<Contact />} />
+        <Route path="/products/:productId" element = {<ProductDetails addToCart={addToCart} data={data}/>} />
       </Routes>
     </Router>
   );
