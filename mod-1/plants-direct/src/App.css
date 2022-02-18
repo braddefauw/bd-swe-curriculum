@@ -44,6 +44,10 @@ a{
   margin: 1.5em;
 }
 
+a:hover {
+  color: black;
+}
+
 .cart-length {
   margin: 1.15em 1.5em 1.5em 1.5em;
   color: white;
@@ -143,4 +147,21 @@ header>h1 {
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   margin-left: 0.5em;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside h3, aside p {
+  margin: 0.5em;
+  text-align: center;
 }

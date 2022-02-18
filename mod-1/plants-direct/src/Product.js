@@ -1,4 +1,5 @@
 import {Img} from "./Img"
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 export const Product = (props) => {
     const {
@@ -23,9 +24,7 @@ export const Product = (props) => {
             </ul>
             <p>${price}</p>
             <div className="promo-blocks__actions">
-                <a href={`/products/${productId}`} className="button--anchor">
-                Full Details
-                </a>        
+                <Link to={`/products/${productId}`}>Full Details</Link>       
                 <button id="mybtn" key={productId} onClick={()=>props.addToCart(props.product)}>
                 {message}
                 </button>
