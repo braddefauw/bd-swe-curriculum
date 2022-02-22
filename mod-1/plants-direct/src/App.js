@@ -1,24 +1,12 @@
 import Home from './Home'
 import Contact from './Contact'
 import About from './About'
-import { useState } from 'react'; 
-import data from './products.json';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'
 import ProductDetails from './ProductDetails'
+import { useSelector } from 'react-redux'
 
 function App() {
-  const [cart, setCart] = useState(data.cart);
-
-  const addToCart = product => {
-      if(cart.indexOf(product) === -1){
-      setCart([...cart, product])
-      product.addedToCart = true;
-      }else{
-      const newCart = cart.filter((oldProduct) => oldProduct !== product);
-      product.addedToCart = false;
-      setCart(newCart);
-      }
-  }
+  const cart = useSelector(state => state.cart) 
   
   return (
     <Router>
@@ -32,10 +20,10 @@ function App() {
         </nav>
       </header>
       <Routes>
-        <Route path="/" element = {<Home addToCart={addToCart} />} />
+        <Route path="/" element = {<Home />} />
         <Route path="/about" element = {<About />} />
         <Route path="/contact" element = {<Contact />} />
-        <Route path="/products/:productId" element = {<ProductDetails addToCart={addToCart} data={data}/>} />
+        <Route path="/products/:productId" element = {<ProductDetails />} />
       </Routes>
     </Router>
   );

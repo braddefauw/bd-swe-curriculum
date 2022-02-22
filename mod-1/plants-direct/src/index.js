@@ -18,10 +18,10 @@ const initialState = createSlice({
       const index = state.products.findIndex(p => p.productId === action.payload.productId)
       const inCart = state.cart.findIndex(p => p.productId === action.payload.productId)
 
-      if(inCart > -1){
+      if (inCart > -1) {
         state.products[index].addedToCart = false
         state.cart.splice(index, 1)
-      }else{
+      } else {
         state.products[index].addedToCart = true
         state.cart.push(action.payload)
       }
@@ -44,3 +44,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+export const { addToCart } = initialState.actions

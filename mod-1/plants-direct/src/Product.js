@@ -1,14 +1,14 @@
 import {Img} from "./Img"
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { addToCart } from './index'
-import { useDispatch } from "react-redux"
 
 export const Product = (props) => {
     const {
         name, description, features, price, images, stockLevel, productId, addedToCart
     } = props.product
 
-    const dispath = useDispatch()
+    const dispatch = useDispatch()
 
     return (
         <article className="product">
@@ -21,8 +21,8 @@ export const Product = (props) => {
             <p>${price}</p>
             <div className="promo-blocks__actions">
                 <Link to={`/products/${productId}`}>Full Details</Link>       
-                <button id="mybtn" key={productId} onClick={()=> dispatchEvent(addToCart(props.product))}>
-                {item.addedToCart ? 'Remove from' : 'Add to'} cart
+                <button id="mybtn" key={productId} onClick={() => dispatch(addToCart(props.product))}>
+                {props.product.addedToCart ? 'Remove from' : 'Add to'} cart
                 </button>
             </div>            
         </article>

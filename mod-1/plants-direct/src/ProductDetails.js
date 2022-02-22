@@ -1,28 +1,42 @@
 import { useParams } from 'react-router-dom'
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from './index'
-import { useDispatch } from "react-redux"
 
-function ProductDetails (props) {
-     const { productId } = useParams()
-     const item = props.data.products[productId-1];
+function ProductDetails () {
+    const { productId } = useParams()
+    const product = useSelector(state => {
+        return state.products.find(p => String(p.productId) === productId)
+    })
+    const dispatch = useDispatch()
 
-     const product = useSelector(state => state.products.find)
+    const {
+        name,
+        description,
+        images: [
+            {
+                title,
+                imageSrc
+            }
+        ],
+        price,
+        addedToCart
+    } = product
     
     return (
         <div class="product-details">
             <div class="product-details__main">
-                <img src={item.images[0].imageSrc} alt={item.images[0].title} />
+                <img src={imageSrc} alt={title} />
             </div>
             <aside>
-            <h3>{item.name}</h3>
+            <h3>{name}</h3>
             <p>
-                {item.description}
+                {description}
             </p>
             <p>
-                ${item.price}
+                ${price}
             </p>
-            <button onClick={()=> dispatchEvent(addToCart(props.product))}>{item.addedToCart ? 'Remove from' : 'Add to'} cart</button>
+            <button onClick={() => dispatch(addToCart(product))}>{addedToCart ? 'Remove from' : 'Add to'} cart</button>
             </aside>
       </div>
     )
