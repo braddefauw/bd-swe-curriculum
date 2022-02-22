@@ -1,9 +1,13 @@
 import { useParams } from 'react-router-dom'
 import './App.css';
+import { addToCart } from './index'
+import { useDispatch } from "react-redux"
 
 function ProductDetails (props) {
      const { productId } = useParams()
      const item = props.data.products[productId-1];
+
+     const product = useSelector(state => state.products.find)
     
     return (
         <div class="product-details">
@@ -18,7 +22,7 @@ function ProductDetails (props) {
             <p>
                 ${item.price}
             </p>
-            <button onClick={() => props.addToCart(item)}>{item.addedToCart ? 'Remove from' : 'Add to'} cart</button>
+            <button onClick={()=> dispatchEvent(addToCart(props.product))}>{item.addedToCart ? 'Remove from' : 'Add to'} cart</button>
             </aside>
       </div>
     )

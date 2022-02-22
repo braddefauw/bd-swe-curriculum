@@ -1,10 +1,12 @@
 import './App.css';
 import { Product } from './Product';
+import { useSelector } from 'react-redux'
 
-function Home(props){
+function Home(){
+    const products = useSelector(state => state.products)
     return (
         <div className="App">
-        {props.data.products.map(product => <Product key={product.productId} product={product} addToCart={props.addToCart}/>)}
+        {products.map(product => <Product key={product.productId} product={product}/>)}
         </div>
     );
 }
