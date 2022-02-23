@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 
 function Nav(){
     const cart = useSelector(state => state.cart) 
+    console.log(new Date(), cart.length)
     return (
         <header>
             <h1>Plants Direct</h1>

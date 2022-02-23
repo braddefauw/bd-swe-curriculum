@@ -17,13 +17,16 @@ const initialState = createSlice({
     addToCart: (state, action) => {
       const index = state.products.findIndex(p => p.productId === action.payload.productId)
       const inCart = state.cart.findIndex(p => p.productId === action.payload.productId)
-
+      // console.log(`inCart`, inCart, `index`, index)
       if (inCart > -1) {
         state.products[index].addedToCart = false
-        state.cart.splice(index, 1)
+        state.cart = state.cart.filter( (item) => item !== action.payload)
+        state.cart.length--
+        // console.log(state.cart)
       } else {
         state.products[index].addedToCart = true
         state.cart.push(action.payload)
+        // console.log(state.cart)
       }
     }
   }
