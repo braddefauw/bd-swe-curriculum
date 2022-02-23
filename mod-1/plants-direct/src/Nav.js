@@ -11,7 +11,7 @@ function Nav(){
             <Link class="header-link" to="/">Home</Link>
             <Link class="header-link" to="/about">About</Link>
             <Link class="header-link" to="/contact">Contact</Link>
-            <section class="cart-length">🛒 ({cart.length})</section>
+            <Link class="cart-length" to="/checkout"><section>🛒 ({cart.length})</section></Link>
             </nav>
         </header>
     )
