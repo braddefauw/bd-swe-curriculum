@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
+import { ItemContainer } from './itemContainer';
 
 // function App() {
 //   return (
@@ -33,11 +34,12 @@ const App = () => {
   return(
     <div>
       <h2>My super React site!</h2>
-      {
+      {/* {
         //insert JS into HTML w/ curly braces
         //whenever you map over a list, include an index key
         sauces.map((sauce, idx) => <h3 key={idx}> {sauce}</h3>)
-      }
+      } */}
+      <ItemContainer item={sauces} banana={'green'} />
     </div>
   )
 }
