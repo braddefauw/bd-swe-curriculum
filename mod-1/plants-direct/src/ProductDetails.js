@@ -24,8 +24,8 @@ function ProductDetails () {
     } = product
     
     return (
-        <div class="product-details">
-            <div class="product-details__main">
+        <div className="product-details">
+            <div className="product-details__main">
                 <img src={imageSrc} alt={title} />
             </div>
             <aside>

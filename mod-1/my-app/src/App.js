@@ -3,6 +3,22 @@ import './App.css';
 import React, { useState } from 'react';
 import { ItemContainer } from './itemContainer';
 
+const App = () => {
+  const sauceList = ['Sriracha', 'Tobasco', 'Salsa', 'Sambal'];
+  //1st arg = what is state element called
+  //2nd arg = what function will update the state?
+  const [sauces, setSauces] = useState(sauceList); //what do we want our default state to be
+  return (
+    <div>
+      <h2>My Super React Site!</h2>
+      {
+      sauces.map((sauce, idx) => <h3 key={idx}>{sauce}</h3>)
+      }
+      <ItemContainer item={sauces} banana={'green'} />
+    </div>
+  )
+}
+
 // function App() {
 //   return (
 //     <div className="App">
@@ -23,25 +39,5 @@ import { ItemContainer } from './itemContainer';
 //     </div>
 //   );
 // }
-
-const App = () => {
-  const sauceList = ['Sriracha', 'Tobasco', 'Salsa', 'Sambal', 'Green Sauce'];
-  
-  //1st arg = what is state element called in HTML
-  //2nd arg = what function will update the state?
-  const [sauces, setSauces] = useState(sauceList) //what do we want our default state to be?
-
-  return(
-    <div>
-      <h2>My super React site!</h2>
-      {/* {
-        //insert JS into HTML w/ curly braces
-        //whenever you map over a list, include an index key
-        sauces.map((sauce, idx) => <h3 key={idx}> {sauce}</h3>)
-      } */}
-      <ItemContainer item={sauces} banana={'green'} />
-    </div>
-  )
-}
 
 export default App;

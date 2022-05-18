@@ -7,7 +7,6 @@ function Home(){
     return (
         <div className="App">
         {products.map(product => <Product key={product.productId} product={product}/>)}
-        console.log("Hi");
         </div>
     );
 }
